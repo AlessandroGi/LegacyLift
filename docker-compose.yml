@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: legacylift
+      POSTGRES_PASSWORD: legacylift  # shortcut: password finta, solo locale; da spostare in .env se il repo esce dall'uso didattico
+      POSTGRES_DB: legacylift
+    ports:
+      - "5433:5432"   # 5433 per non scontrarsi con un eventuale PostgreSQL già installato
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

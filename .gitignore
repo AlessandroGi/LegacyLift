@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# dbt
+dbt_packages/
+
+# Dati e file Microsoft: si scaricano, non si versionano
+*.bak
+*.bacpac
+*.ispac
+data/
