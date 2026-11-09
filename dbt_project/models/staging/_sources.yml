@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: Copy of the WideWorldImporters OLTP tables, loaded by scripts/load_to_postgres.py
+    tables:
+      - name: suppliers
+      - name: suppliers_archive
+      - name: supplier_categories
+      - name: supplier_categories_archive
+      - name: people
+      - name: people_archive
+
+  - name: legacy
+    schema: legacy
+    description: Copy of the legacy data warehouse (WideWorldImportersDW) built by the SSIS flow, used only to compare results.
+    tables:
+      - name: dim_supplier

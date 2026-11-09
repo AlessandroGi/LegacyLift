@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_supplier
+    description: Supplier versions with validity intervals (slowly changing dimension type 2), rebuilt from the raw copy of the OLTP.
+    columns:
+      - name: supplier_key
+        data_tests: [unique, not_null]
+      - name: wwi_supplier_id
+        data_tests: [not_null]
+      - name: valid_from
+        data_tests: [not_null]
+      - name: valid_to
+        data_tests: [not_null]
